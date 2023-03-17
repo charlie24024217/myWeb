@@ -126,8 +126,8 @@ main #cssBox #cssHead::before {
   height: 100px;
   border-radius: 50%;
   background-color: #ce4a43;
-  top: 5rem;
-  right: 5rem;
+  top: 100px;
+  right: 100px;
 }
 main #myCanvas {
   width: 300px;
