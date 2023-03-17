@@ -53,7 +53,7 @@ let textArray = [
     text: "/JumpBall",
     url: "https://charlie24024217.github.io/jumpBall/index",
   },
-  { text: "/Snake", url: "https://charlie24024217.github.io/project003/" },
+  { text: "/Snake", url: "https://charlie24024217.github.io/snake/" },
 ];
 
 function init() {
