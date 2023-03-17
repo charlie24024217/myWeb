@@ -1,0 +1,221 @@
+$mainColor: #d9d4cb;
+$yellow: #ffc628;
+$red: #ce4a43;
+$blue: #6fb1b0;
+$darkblue: #3d689b;
+$black: #4f3f54;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: $mainColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   padding: 0 10vw;
+}
+
+main {
+  overflow: hidden;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  #cssBox {
+    width: 300px;
+    aspect-ratio: 1/2;
+    overflow: hidden;
+    background-color: $black;
+    display: flex;
+    position: relative;
+    #cssProject {
+      width: 300px;
+      height: 600px;
+      background-color: $red;
+      position: absolute;
+      z-index: 10;
+      opacity: 0;
+      transition: 0.5s;
+
+      &:hover {
+        opacity: 1;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 100%;
+        list-style: none;
+        gap: 50px;
+        h2 {
+          font-size: 2rem;
+          padding: 1rem 0;
+        }
+        a {
+          text-decoration: none;
+          color: $yellow;
+          font-size: 2rem;
+          background-color: $darkblue;
+          padding: 1rem;
+          border-radius: 50vmin;
+          transition: 0.3s;
+          &:hover {
+            background-color: $yellow;
+            color: $darkblue;
+          }
+        }
+      }
+    }
+    #cssHead {
+      width: 300px;
+      height: 600px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+      div {
+        width: 150px;
+        height: 150px;
+        background-color: $yellow;
+        &:nth-of-type(1),
+        &:nth-of-type(4) {
+          border-radius: 0 100% 0 100%;
+        }
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+          border-radius: 100% 0 100% 0;
+        }
+        &:nth-of-type(5) {
+          border-top: 50px solid $blue;
+          border-bottom: 50px solid $darkblue;
+          border-left: 50px solid $darkblue;
+          border-right: 50px solid $blue;
+          width: 100px;
+          height: 100px;
+          border-radius: 20% 50% 0 50%;
+        }
+        &:nth-of-type(7) {
+          border-top: 50px solid $blue;
+          border-bottom: 50px solid $darkblue;
+          border-left: 50px solid $blue;
+          border-right: 50px solid $darkblue;
+          width: 100px;
+          height: 100px;
+          border-radius: 50% 20% 50% 0;
+        }
+        &:nth-of-type(6) {
+          width: 20px;
+          background-color: $darkblue;
+        }
+        &:nth-of-type(8) {
+          width: 300px;
+          border-top: 150px solid $red;
+          border-left: 75px solid $black;
+          border-right: 75px solid $black;
+        }
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: $red;
+        top: 5rem;
+        right: 5rem;
+      }
+    }
+  }
+  #myCanvas {
+    width: 300px;
+    height: 300px;
+    background-color: #4f3f54;
+    border: 30px solid $blue;
+  }
+
+  #jsBox {
+    width: 300px;
+    height: 300px;
+    #jsContent {
+      width: 300px;
+      height: 300px;
+      background-color: $yellow;
+      // padding: 10px;
+      border: 30px solid $darkblue;
+
+      div {
+        display: flex;
+        align-items: start;
+        justify-content: space-around;
+        height: 70%;
+        h2 {
+          font-size: 8rem;
+          position: relative;
+          &::before {
+            content: "<a a href=";
+            position: absolute;
+            font-size: 1.4rem;
+            bottom: 0;
+            right: 0;
+          }
+          &::after {
+            content: "></a>";
+            position: absolute;
+            font-size: 1rem;
+            bottom: -2rem;
+            right: -3.6rem;
+          }
+        }
+        #runBen {
+          height: 80%;
+          width: 2rem;
+          background-color: $blue;
+          position: relative;
+          top: -3rem;
+          overflow: hidden;
+          border-radius: 50vmin;
+          // border: 1px solid $darkblue;
+          // transform: rotate(45deg);
+          i {
+            position: absolute;
+            // bottom: 0px;
+            font-size: 2rem;
+            color: $red;
+            // transform: rotate(90deg);
+          }
+        }
+      }
+      a {
+        position: relative;
+        left: 0.6rem;
+        text-decoration: none;
+        height: fit-content;
+        font-size: 2rem;
+        color: $darkblue;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    height: auto;
+  }
+  main {
+    height: auto;
+    width: 300px;
+  }
+}
