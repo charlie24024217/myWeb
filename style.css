@@ -156,7 +156,7 @@ main #jsBox #jsContent div h2 {
   position: relative;
 }
 main #jsBox #jsContent div h2::before {
-  content: "<a a href=";
+  content: "<a href=";
   position: absolute;
   font-size: 1.4rem;
   bottom: 0;
